@@ -119,10 +119,10 @@
             INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (1,'Como dizer adeus em alemao?') RETURNING ID INTO myid;
             
                 /*ANSWERS*/
-                INSERT INTO ANSWER (ID_QUESTION,ANSWER,NATURE) VALUES (@last_question_id,"Tsch",false);
-                INSERT INTO ANSWER (ID_QUESTION,ANSWER,NATURE) VALUES (@last_question_id,"bis kola",false);
-                INSERT INTO ANSWER (ID_QUESTION,ANSWER,NATURE) VALUES (@last_question_id,"aus whiedersehen",true);
-                INSERT INTO ANSWER (ID_QUESTION,ANSWER,NATURE) VALUES (@last_question_id,"bis",false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Tschüs', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bis kola', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'aus wiedersehen', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bis', false);
             
              /*Q11*/
             INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (1,'Como dizer eu venho de uma cidade ?') RETURNING ID INTO myid;
@@ -289,7 +289,7 @@
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'existencia', false);
             
              /*Q14*/
-            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'kommen') RETURNING ID_QUESTION INTO @last_question_id;
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'kommen') RETURNING ID INTO myid;
             
                 /*ANSWERS*/
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ser', false);
