@@ -29,6 +29,8 @@
 
     INSERT INTO CATEGORY (NAME,UNITY) VALUES ('Wortschatz (vocabulario)','alle');
 
+    INSERT INTO CATEGORY (NAME,UNITY) VALUES ('Link-Vokabular','alle')
+
     /*QUESTIONS & ANSWERS*/
         DO $$
         DECLARE myid INT;
@@ -277,18 +279,90 @@
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'heiβst', false);
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'heiβt', false);
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'heiβen', true);
-        
-        /*CATEGORY Wortschatz(Vocabulario)*/
+            
             /*Q13*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (2,'Ich (Sein)') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bin', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bist', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ist/es', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'sind', false);
+            
+            /*Q14*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (2,'Du (Sein)') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bin', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bist', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ist/es', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'sind', false);
+            
+            /*Q15*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (2,'er/sie (Sein)') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bin', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bist', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ist/es', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'sind', false);
+            
+            /*Q16*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (2,'Sie (Sein)') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bin', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'bist', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ist/es', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'sind', true);
+            
+             /*Q17*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (2,'Ich (mögen)') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mag', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'magst', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mag', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mögen', false);
+            
+            /*Q18*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (2,'Du (mögen)') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mag', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'magst', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mag', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mögen', false);
+        
+            /*Q19*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (2,'er/sie (mögen)') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mag', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'magst', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mag', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mögen', false);
+            
+            /*Q20*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (2,'Sie (mögen)') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mag', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'magst', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mag', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'mögen', true);
+
+        /*CATEGORY Wortschatz(Vocabulario)*/
+            /*Q1*/
             INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'heiβen') RETURNING ID INTO myid;
             
                 /*ANSWERS*/
-                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ser', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ser chamado', true);
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ouvir', false);
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'dancar', false);
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'existencia', false);
             
-             /*Q14*/
+             /*Q2*/
             INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'kommen') RETURNING ID INTO myid;
             
                 /*ANSWERS*/
@@ -297,7 +371,7 @@
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ser de uma cidade', false);
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'existência em algo', false);
             
-            /*Q15*/
+            /*Q3*/
             INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'wohnen') RETURNING ID INTO myid;
             
                 /*ANSWERS*/
@@ -305,5 +379,268 @@
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ser de um país', false);
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'ser de uma cidade', true);
                 INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'existência em algo', false);
+            
+            /*Q4*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Fuβball') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Futebol', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Aranhas', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Boné', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Bola de futebol', false);
+            
+            /*Q5*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Mode') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Moda', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Aranhas', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Boné', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Bola de futebol', false);
+            
+            /*Q6*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Technik') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Moda', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Aranhas', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Tecnologia', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Bola de futebol', false);
+            
+            /*Q7*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Kino') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Moda', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Filme', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Tecnologia', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Cinema', true);    
+            
+            /*Q8*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Tee') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Moda', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Filme', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Chá', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Cinema', false);  
+            
+            /*Q9*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Kunst') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Moda', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Filme', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Arte', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Cinema', false);  
+            
+            /*Q10*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Tanzen') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Correr', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Cagar', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Dançar', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Agitar', false);  
+
+            
+            /*Q11*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Sein') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Correr', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Gostar', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Ser', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Agitar', false);  
+
+             /*Q12*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Mögen') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Correr', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Gostar', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Ser', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Agitar', false);  
+            
+            /*Q13*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Bildleiste') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Barra de imagens', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Gostar', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Ser', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Agitar', false);  
+
+             /*Q14*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Stellen') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Empregos', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Gostar', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Ser', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Agitar', false);   
+
+            /*Q15*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Kursraum') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Sala de cursos', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Curriculo', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Cursos', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Agitar', false);      
+
+            /*Q16*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'ihr') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'o seu', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'no', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'na', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'a', false); 
+
+            /*Q17*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'einmal') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'o seu', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'uma vez',true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'na', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'a', false);       
+
+            /*Q17*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Chat-Collage') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Colagem de chat', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'uma vez',false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'na', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'a', false);     
+
+            /*Q17*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (3,'Sich') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'em si', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'uma vez',false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'na', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'a', false);     
          
+         /*CATEGORY Link-Vokabular*/
+            /*Q1*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Wer?') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Quem?', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'O que?', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Onde?', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'De onde?', false);
+            
+            /*Q2*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Wo?') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Quem?', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'O que?', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Onde?', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'De onde?', false);
+            
+            /*Q3*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Woher?') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Quem?', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'O que?', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Onde?', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'De onde?', true);
+            
+            /*Q4*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Was?') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Quem?', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'O que?', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Onde?', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'De onde?', false);
+            
+            /*Q5*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Auch') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'e', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'também', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'com', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'afinal', false);
+            
+            /*Q5*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'über') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'e', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'sobre (acerca de)', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'com', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'afinal', false);
+            
+             /*Q6*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'auf') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'e', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'sobre (em,depois de, em direcao a, rumo a)', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'com', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'afinal', false);
+            
+             /*Q7*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'im') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'e', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'na', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'no', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'afinal', false);
+            
+            /*Q8*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Kurs') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Curso', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'na', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'no', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'afinal', false);
+
+            /*Q9*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Fragen') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Perguntas', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Frases', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Preposicoes', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Cameras', false);
+            
+            /*Q10*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Wählen') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Perguntas', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Frases', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Selecionar', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Cameras', false);
+            
+            /*Q11*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Notieren') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Nota (tomar nota, anotar..etc)', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Falar', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Bloco de notas', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Cameras', false);
+            
+            /*Q12*/
+            INSERT INTO QUESTION (ID_CATEGORY,QUESTION) VALUES (4,'Durch') RETURNING ID INTO myid;
+            
+                /*ANSWERS*/
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Atravês', true);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Por ai', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Perto de', false);
+                INSERT INTO ANSWER (ID_QUESTION, ANSWER, NATURE) VALUES (myid, 'Cameras', false);
+
          END $$;
